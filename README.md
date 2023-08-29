@@ -58,3 +58,19 @@ multiprocessing.Pool 查询官方文档是守护进程，所以只需要让主�
 
 并且需要服务器提供一个可下载的文件链接，下载到本地后会自动移除，会不停下载该文件
 
+# 服务器提供下载链接
+基本上所有linux发行版都内置Python，我们使用Python3
+
+直接开启http服务：`python3 -m http.server 80`
+
+后台开启http服务：`nohup python3 -m http.server 80 &`
+
+如果是后台开启http服务，那就需要相应的关闭操作：`ps -ef | grep python`，`kill -s 9 pid`
+
+对上述命令做一些解释，python3是因为python3不完全兼容python2，目前基本都是python3，python2已成历史
+
+端口一定是80，我试过其他端口，不行
+
+
+
+
