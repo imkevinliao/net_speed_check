@@ -72,7 +72,27 @@ multiprocessing.Pool 查询官方文档是守护进程，所以只需要让主�
 后台服务顾名思义执行命令后会挂在后台不会被中断，对比直接开启，我们如果使用ctrl+c终端的话会立刻停止，由于持续测速，所以一直开着比较好
 
 如果你不知道后台服务怎么关，那就 reboot 命令直接重启服务器，或者就让它挂着也无所谓了
-
+# vultr服务器测速文件地址
+```
+vultr_server = [
+    ["韩国 首尔","http://sel-kor-ping.vultr.com/vultr.com.100MB.bin"],
+    ["日本 东京","http://hnd-jp-ping.vultr.com/vultr.com.100MB.bin"],
+    ["新加坡","http://sgp-ping.vultr.com/vultr.com.100MB.bin"],
+    ["悉尼","http://syd-au-ping.vultr.com/vultr.com.100MB.bin"],
+    ["德国 法兰克福","http://fra-de-ping.vultr.com/vultr.com.100MB.bin"],
+    ["荷兰 阿姆斯特丹","http://ams-nl-ping.vultr.com/vultr.com.100MB.bin"],
+    ["英国 伦敦","http://lon-gb-ping.vultr.com/vultr.com.100MB.bin"],
+    ["法国 巴黎","http://par-fr-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美东 华盛顿州 西雅图","http://wa-us-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美西 加州 硅谷","http://wa-us-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美西 加州 洛杉矶","http://lax-ca-us-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美东 芝加哥","http://il-us-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美中 德克萨斯州 达拉斯","http://tx-us-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美东 新泽西","http://nj-us-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美东 乔治亚州 亚特兰大","http://ga-us-ping.vultr.com/vultr.com.100MB.bin"],
+    ["美东 佛罗里达州 迈阿密","http://fl-us-ping.vultr.com/vultr.com.100MB.bin"],
+]
+```
 
 
 
