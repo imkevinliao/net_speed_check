@@ -66,19 +66,23 @@ def net_watch():
             writer.writerow({'日期': date, '时间': time_info, '上传': sent, '下载': recv})  # 单位是 MB/S
 
 
-def net_download(url: str):
+
+def net_download(url: str, download_time=0):
+    """
+    :param url: 下载地址
+    :param download_time:下载时间：0表示不限制，60表示下载60s
+    """
     while True:
-        down_filename = "net_test"
-        file = requests.get(url).content
-        with open(down_filename, "wb") as f:
-            f.write(file)
-        down_filepath = os.path.join(os.path.dirname(__file__), down_filename)
-        if os.path.exists(down_filepath):
-            os.remove(down_filepath)
-            ...
-        else:
-            print(f"{time.strftime('%Y-%m-%d %H%M%S')} file download failed.")
-            ...
+        # print("start download.")
+        start_time = time.time()
+        file = requests.get(url,stream = True)
+        for _ in file.iter_content(chunk_size=65536):
+            now_time = time.time()
+            if download_time > 0:
+                if now_time-start_time > download_time:
+                    break
+        if download_time > 0:
+            break
 
 
 def multi_core(download_link=None):
